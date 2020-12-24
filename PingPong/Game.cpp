@@ -88,6 +88,14 @@ void Game::ProcessInput() {
                 break;
         }
     }
+    
+    // 获取键盘的状态
+    const Uint8* state = SDL_GetKeyboardState(NULL);
+    // 如果按了 Esc，结束循环
+    if (state[SDL_SCANCODE_ESCAPE])
+    {
+        mIsRunning = false;
+    }
 }
 
 void Game::UpdateGame()
