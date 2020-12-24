@@ -2,7 +2,7 @@
 //  Game.hpp
 //  PingPong
 //
-//  Created by 千凡谷梦 on 2020/12/24.
+//  Created by guyu on 2020/12/24.
 //  Copyright © 2020 guyu2019. All rights reserved.
 //
 
@@ -10,6 +10,13 @@
 #define Game_hpp
 
 #include "SDL.h"
+
+// Vector2 结构体仅存储 x 和 y 坐标
+struct Vector2
+{
+    float x;
+    float y;
+};
 
 // Game class
 class Game
@@ -36,6 +43,20 @@ private:
     SDL_Renderer* mRenderer;
     // 继续运行
     bool mIsRunning;
+    
+    // 球拍位置
+    Vector2 mPaddlePos;
+    // 球的位置
+    Vector2 mBallPos;
+    
+    // 球拍方向
+    int mPaddleDir;
+    
+    // 球的速度
+    Vector2 mBallVel;
+    
+    // 记录运行时间
+    Uint32 mTicksCount;
 };
 
 #endif /* Game_hpp */
