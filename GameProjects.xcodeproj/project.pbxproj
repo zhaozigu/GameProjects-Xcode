@@ -11,7 +11,8 @@
 		5E79BCE02594E46C00B79CC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCDF2594E46C00B79CC3 /* main.cpp */; };
 		5E79BCE62594E5B400B79CC3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
 		5E79BCE72594E6EF00B79CC3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
-		5E79BCEA2594EAFD00B79CC3 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCE82594EAFD00B79CC3 /* Game.cpp */; };
+		5EA1877C2594EDD3003153A1 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCE82594EAFD00B79CC3 /* Game.cpp */; };
+		5EA1877F2594EDE1003153A1 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1877D2594EDE1003153A1 /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,9 @@
 		5E79BCE52594E5B400B79CC3 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ThirdParty/SDL2.framework; sourceTree = "<group>"; };
 		5E79BCE82594EAFD00B79CC3 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		5E79BCE92594EAFD00B79CC3 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		5EA1877D2594EDE1003153A1 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		5EA1877E2594EDE1003153A1 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		5EA187802594F406003153A1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		5E79BCBA2594DDF500B79CC3 = {
 			isa = PBXGroup;
 			children = (
+				5EA187812594F65F003153A1 /* ProjectConfig */,
 				5E79BCDE2594E46C00B79CC3 /* GameEnvironment */,
 				5E79BCD32594E38D00B79CC3 /* PingPong */,
 				5E79BCC42594DDF500B79CC3 /* Products */,
@@ -88,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				5E79BCD42594E38D00B79CC3 /* main.cpp */,
+				5EA1877D2594EDE1003153A1 /* Game.cpp */,
+				5EA1877E2594EDE1003153A1 /* Game.hpp */,
 			);
 			path = PingPong;
 			sourceTree = "<group>";
@@ -95,9 +102,9 @@
 		5E79BCDE2594E46C00B79CC3 /* GameEnvironment */ = {
 			isa = PBXGroup;
 			children = (
-				5E79BCDF2594E46C00B79CC3 /* main.cpp */,
 				5E79BCE82594EAFD00B79CC3 /* Game.cpp */,
 				5E79BCE92594EAFD00B79CC3 /* Game.hpp */,
+				5E79BCDF2594E46C00B79CC3 /* main.cpp */,
 			);
 			path = GameEnvironment;
 			sourceTree = "<group>";
@@ -108,6 +115,14 @@
 				5E79BCE52594E5B400B79CC3 /* SDL2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EA187812594F65F003153A1 /* ProjectConfig */ = {
+			isa = PBXGroup;
+			children = (
+				5EA187802594F406003153A1 /* Config.xcconfig */,
+			);
+			path = ProjectConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E79BCD52594E38D00B79CC3 /* main.cpp in Sources */,
+				5EA1877F2594EDE1003153A1 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E79BCE02594E46C00B79CC3 /* main.cpp in Sources */,
-				5E79BCEA2594EAFD00B79CC3 /* Game.cpp in Sources */,
+				5EA1877C2594EDD3003153A1 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +222,7 @@
 /* Begin XCBuildConfiguration section */
 		5E79BCC82594DDF500B79CC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -264,6 +281,7 @@
 		};
 		5E79BCC92594DDF500B79CC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -315,32 +333,39 @@
 		};
 		5E79BCD72594E38D00B79CC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdParty",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ThirdParty/SDL2.framework/Headers/";
+				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		5E79BCD82594E38D00B79CC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdParty",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ThirdParty/SDL2.framework/Headers/";
+				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		5E79BCE22594E46C00B79CC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -354,6 +379,7 @@
 		};
 		5E79BCE32594E46C00B79CC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
