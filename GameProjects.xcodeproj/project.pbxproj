@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E7202482596481B0050E871 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E7202472596481B0050E871 /* main.cpp */; };
+		5E72024C259648A40050E871 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
+		5E72024F259648E50050E871 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E72024D259648E50050E871 /* Game.cpp */; };
 		5E79BCD52594E38D00B79CC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCD42594E38D00B79CC3 /* main.cpp */; };
 		5E79BCE02594E46C00B79CC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCDF2594E46C00B79CC3 /* main.cpp */; };
 		5E79BCE62594E5B400B79CC3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
@@ -16,6 +19,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5E7202432596481B0050E871 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		5E79BCD02594E38D00B79CC3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,6 +49,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E7202452596481B0050E871 /* Sprites */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sprites; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E7202472596481B0050E871 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5E72024D259648E50050E871 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		5E72024E259648E50050E871 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		5E79BCD22594E38D00B79CC3 /* PingPong */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PingPong; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E79BCD42594E38D00B79CC3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5E79BCDD2594E46C00B79CC3 /* GameEnvironment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEnvironment; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +66,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E7202422596481B0050E871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E72024C259648A40050E871 /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E79BCCF2594E38D00B79CC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,12 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E7202462596481B0050E871 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				5E7202472596481B0050E871 /* main.cpp */,
+				5E72024D259648E50050E871 /* Game.cpp */,
+				5E72024E259648E50050E871 /* Game.hpp */,
+			);
+			path = Sprites;
+			sourceTree = "<group>";
+		};
 		5E79BCBA2594DDF500B79CC3 = {
 			isa = PBXGroup;
 			children = (
 				5EA187812594F65F003153A1 /* ProjectConfig */,
 				5E79BCDE2594E46C00B79CC3 /* GameEnvironment */,
 				5E79BCD32594E38D00B79CC3 /* PingPong */,
+				5E7202462596481B0050E871 /* Sprites */,
 				5E79BCC42594DDF500B79CC3 /* Products */,
 				5E79BCE42594E5B400B79CC3 /* Frameworks */,
 			);
@@ -85,6 +120,7 @@
 			children = (
 				5E79BCD22594E38D00B79CC3 /* PingPong */,
 				5E79BCDD2594E46C00B79CC3 /* GameEnvironment */,
+				5E7202452596481B0050E871 /* Sprites */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +164,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5E7202442596481B0050E871 /* Sprites */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E72024B2596481B0050E871 /* Build configuration list for PBXNativeTarget "Sprites" */;
+			buildPhases = (
+				5E7202412596481B0050E871 /* Sources */,
+				5E7202422596481B0050E871 /* Frameworks */,
+				5E7202432596481B0050E871 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sprites;
+			productName = Sprites;
+			productReference = 5E7202452596481B0050E871 /* Sprites */;
+			productType = "com.apple.product-type.tool";
+		};
 		5E79BCD12594E38D00B79CC3 /* PingPong */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E79BCD62594E38D00B79CC3 /* Build configuration list for PBXNativeTarget "PingPong" */;
@@ -171,6 +224,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = guyu2019;
 				TargetAttributes = {
+					5E7202442596481B0050E871 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					5E79BCD12594E38D00B79CC3 = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -194,11 +250,21 @@
 			targets = (
 				5E79BCD12594E38D00B79CC3 /* PingPong */,
 				5E79BCDC2594E46C00B79CC3 /* GameEnvironment */,
+				5E7202442596481B0050E871 /* Sprites */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5E7202412596481B0050E871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E7202482596481B0050E871 /* main.cpp in Sources */,
+				5E72024F259648E50050E871 /* Game.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E79BCCE2594E38D00B79CC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +286,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5E7202492596481B0050E871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ThirdParty/SDL2.framework/Headers/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5E72024A2596481B0050E871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ThirdParty/SDL2.framework/Headers/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5E79BCC82594DDF500B79CC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EA187802594F406003153A1 /* Config.xcconfig */;
@@ -394,6 +488,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E72024B2596481B0050E871 /* Build configuration list for PBXNativeTarget "Sprites" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E7202492596481B0050E871 /* Debug */,
+				5E72024A2596481B0050E871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5E79BCBE2594DDF500B79CC3 /* Build configuration list for PBXProject "GameProjects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
