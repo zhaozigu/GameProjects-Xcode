@@ -8,15 +8,10 @@
 
 #ifndef Game_hpp
 #define Game_hpp
+#include <vector>
 
 #include "SDL.h"
-
-// Vector2 结构体仅存储 x 和 y 坐标
-struct Vector2
-{
-    float x;
-    float y;
-};
+#include "Math.hpp"
 
 // Game class
 class Game
@@ -29,6 +24,9 @@ public:
     void RunLoop();
     // 关闭游戏
     void Shutdown();
+    
+    void AddActor(class Actor* actor);
+    void RemoveActor(class Actor* actor);
 private:
     // 处理进程输入
     void ProcessInput();
@@ -57,6 +55,13 @@ private:
     
     // 记录运行时间
     Uint32 mTicksCount;
+    
+    // 游戏中的所有actors
+    std::vector<class Actor*> mActors;
+    // 待定的actors
+    std::vector<class Actor*> mPendingActors;
+    // 跟踪现在是否在更新actor
+    bool mUpdatingActors;
 };
 
 #endif /* Game_hpp */

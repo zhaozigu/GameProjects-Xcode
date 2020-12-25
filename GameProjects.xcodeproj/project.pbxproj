@@ -10,6 +10,9 @@
 		5E7202482596481B0050E871 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E7202472596481B0050E871 /* main.cpp */; };
 		5E72024C259648A40050E871 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
 		5E72024F259648E50050E871 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E72024D259648E50050E871 /* Game.cpp */; };
+		5E72025225964DE60050E871 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E72025025964DE60050E871 /* Actor.cpp */; };
+		5E720255259651270050E871 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E720253259651270050E871 /* Component.cpp */; };
+		5E72025B259651880050E871 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E720259259651880050E871 /* Math.cpp */; };
 		5E79BCD52594E38D00B79CC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCD42594E38D00B79CC3 /* main.cpp */; };
 		5E79BCE02594E46C00B79CC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCDF2594E46C00B79CC3 /* main.cpp */; };
 		5E79BCE62594E5B400B79CC3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
@@ -53,6 +56,12 @@
 		5E7202472596481B0050E871 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5E72024D259648E50050E871 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		5E72024E259648E50050E871 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		5E72025025964DE60050E871 /* Actor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		5E72025125964DE60050E871 /* Actor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
+		5E720253259651270050E871 /* Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		5E720254259651270050E871 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		5E720259259651880050E871 /* Math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
+		5E72025A259651880050E871 /* Math.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
 		5E79BCD22594E38D00B79CC3 /* PingPong */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PingPong; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E79BCD42594E38D00B79CC3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5E79BCDD2594E46C00B79CC3 /* GameEnvironment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEnvironment; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +108,12 @@
 				5E7202472596481B0050E871 /* main.cpp */,
 				5E72024D259648E50050E871 /* Game.cpp */,
 				5E72024E259648E50050E871 /* Game.hpp */,
+				5E72025025964DE60050E871 /* Actor.cpp */,
+				5E72025125964DE60050E871 /* Actor.hpp */,
+				5E720253259651270050E871 /* Component.cpp */,
+				5E720254259651270050E871 /* Component.hpp */,
+				5E720259259651880050E871 /* Math.cpp */,
+				5E72025A259651880050E871 /* Math.hpp */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -260,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E72025225964DE60050E871 /* Actor.cpp in Sources */,
+				5E720255259651270050E871 /* Component.cpp in Sources */,
 				5E7202482596481B0050E871 /* main.cpp in Sources */,
 				5E72024F259648E50050E871 /* Game.cpp in Sources */,
+				5E72025B259651880050E871 /* Math.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,7 +65,8 @@ bool Game::Initialize()
     mBallPos.x = 1024.0f / 2.0f;
     mBallPos.y = 768.0f / 2.0f;
     
-    mBallVel = {-200.0f, 235.0f};
+    mBallVel.x = -200.0f;
+    mBallVel.y = 235.0f;
     return true;
 }
 
@@ -257,4 +258,38 @@ void Game::GenerateOutput()
     // 交换前后缓冲区
     SDL_RenderPresent(mRenderer);
     
+}
+
+void Game::AddActor(Actor* actor)
+{
+  // 如果正在更新actor，就添加到待处理列表里
+  if (mUpdatingActors)
+  {
+    mPendingActors.emplace_back(actor);
+  }
+  else
+  {
+    mActors.emplace_back(actor);
+  }
+}
+
+void Game::RemoveActor(Actor* actor)
+{
+  // 是否在待定actor中
+  auto iter = std::find(mPendingActors.begin(), mPendingActors.end(), actor);
+  if (iter != mPendingActors.end())
+  {
+    // 交换到尾部（避免复制)
+    std::iter_swap(iter, mPendingActors.end() - 1);
+    mPendingActors.pop_back();
+  }
+  
+  // 是否在 actor中
+  iter = std::find(mActors.begin(), mActors.end(), actor);
+  if (iter != mActors.end())
+  {
+    // 交换到尾部（避免复制)
+    std::iter_swap(iter, mActors.end() - 1);
+    mActors.pop_back();
+  }
 }
