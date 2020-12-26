@@ -22,6 +22,7 @@
 		5EA1877F2594EDE1003153A1 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1877D2594EDE1003153A1 /* Game.cpp */; };
 		5EDB0D1325978A950045CF6F /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
 		5EDB0D1425978A950045CF6F /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +90,8 @@
 		5EA1877E2594EDE1003153A1 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		5EA187802594F406003153A1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		5EDB0D0E259786780045CF6F /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ThirdParty/SDL2_image.framework; sourceTree = "<group>"; };
+		5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
+		5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				5E72025A259651880050E871 /* Math.hpp */,
 				5E72025C259654980050E871 /* SpriteComponent.cpp */,
 				5E72025D259654980050E871 /* SpriteComponent.hpp */,
+				5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */,
+				5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 			files = (
 				5E72025225964DE60050E871 /* Actor.cpp in Sources */,
 				5E720255259651270050E871 /* Component.cpp in Sources */,
+				5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */,
 				5E72025E259654980050E871 /* SpriteComponent.cpp in Sources */,
 				5E7202482596481B0050E871 /* main.cpp in Sources */,
 				5E72024F259648E50050E871 /* Game.cpp in Sources */,
