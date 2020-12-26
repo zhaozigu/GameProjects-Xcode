@@ -7,10 +7,7 @@
 //
 
 #include "Game.hpp"
-
-
-const int kThickness = 15;
-const float kPaddleH = 100.0f;
+#include "SDL_image.h"
 
 Game::Game()
 :mWindow(nullptr)
@@ -59,8 +56,40 @@ bool Game::Initialize()
         SDL_Log("创建渲染器失败: %s", SDL_GetError());
         return false;
     }
-
+    
+    if (IMG_Init(IMG_INIT_PNG) == 0)
+    {
+        SDL_Log("不能初始化SDL_image: %s", SDL_GetError());
+        return false;
+    }
+    
+    SDL_Texture* tex = LoadTexture("test.png");
+    SDL_RenderCopy(mRenderer, tex, 0, 0);
+    SDL_RenderPresent(mRenderer);
+    
     return true;
+}
+
+SDL_Texture* Game::LoadTexture(const char* fileName)
+{
+  // 从文件中加载
+  SDL_Surface* surf = IMG_Load(fileName);
+  
+  if (!surf)
+  {
+    SDL_Log("加载图像文件 %s 失败", fileName);
+    return nullptr;
+  }
+    
+  // 从 surface 创建 texture
+  SDL_Texture* tex = SDL_CreateTextureFromSurface(mRenderer, surf);
+  SDL_FreeSurface(surf);
+  if (!tex)
+  {
+    SDL_Log("%s surface 转换到 texture 失败!", fileName);
+    return nullptr;
+  }
+  return tex;
 }
 
 void Game::Shutdown()
@@ -129,17 +158,17 @@ void Game::UpdateGame()
 
 void Game::GenerateOutput()
 {
-    SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
-    SDL_RenderClear(mRenderer);
-    
-    // 绘制所有精灵组件
-    for (auto sprite : mSprites)
-    {
-        sprite->Draw(mRenderer);
-        
-    }
-    
-    SDL_RenderPresent(mRenderer);
+//    SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
+//    SDL_RenderClear(mRenderer);
+//
+//    // 绘制所有精灵组件
+//    for (auto sprite : mSprites)
+//    {
+//        sprite->Draw(mRenderer);
+//
+//    }
+//
+//    SDL_RenderPresent(mRenderer);
     
 }
 

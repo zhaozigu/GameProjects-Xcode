@@ -9,9 +9,10 @@
 #ifndef Game_hpp
 #define Game_hpp
 #include <vector>
-
+#include <string>
 #include "SDL.h"
 #include "Math.hpp"
+#include "SpriteComponent.hpp"
 
 // Game class
 class Game
@@ -27,7 +28,12 @@ public:
     
     void AddActor(class Actor* actor);
     void RemoveActor(class Actor* actor);
+    
+    void AddSprite(SpriteComponent* sprite);
+    void RemoveSprite(SpriteComponent* sprite);
 private:
+    SDL_Texture* LoadTexture(const char* fileName);
+    
     // 处理进程输入
     void ProcessInput();
     // 更新游戏
@@ -58,6 +64,8 @@ private:
     
     // 游戏中的所有actors
     std::vector<class Actor*> mActors;
+    // 绘制的所有精灵组件
+    std::vector<class SpriteComponent*> mSprites;
     // 待定的actors
     std::vector<class Actor*> mPendingActors;
     // 跟踪现在是否在更新actor
