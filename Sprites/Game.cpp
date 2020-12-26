@@ -70,6 +70,11 @@ bool Game::Initialize()
 }
 
 void Game::LoadData() {
+    // 创建一个飞船player
+     mShip = new Ship(this);
+     mShip->SetPosition(Vector2(100.0f, 384.0f));
+     mShip->SetScale(1.5f);
+    
     // 为背景创建 actor (不需要子类)
     Actor* temp = new Actor(this);
     temp->SetPosition(Vector2(512.0f, 384.0f));
@@ -210,6 +215,8 @@ void Game::ProcessInput() {
         mIsRunning = false;
     }
     
+    // 处理飞船的输入
+    mShip->ProcessKeyboard(state);
 }
 
 void Game::UpdateGame()

@@ -27,6 +27,7 @@
 		5EA6AF292597958C00FC6949 /* Farback01.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF182597956300FC6949 /* Farback01.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5EA6AF2A2597958C00FC6949 /* Farback02.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF192597956300FC6949 /* Farback02.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5EA6AF2B2597959A00FC6949 /* Stars.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF232597956300FC6949 /* Stars.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5EA6AF2E2597970800FC6949 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF2C2597970800FC6949 /* Ship.cpp */; };
 		5EDB0D1325978A950045CF6F /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
 		5EDB0D1425978A950045CF6F /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */; };
@@ -111,6 +112,8 @@
 		5EA6AF212597956300FC6949 /* Ship03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship03.png; sourceTree = "<group>"; };
 		5EA6AF222597956300FC6949 /* Ship04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship04.png; sourceTree = "<group>"; };
 		5EA6AF232597956300FC6949 /* Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stars.png; sourceTree = "<group>"; };
+		5EA6AF2C2597970800FC6949 /* Ship.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
+		5EA6AF2D2597970800FC6949 /* Ship.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ship.hpp; sourceTree = "<group>"; };
 		5EDB0D0E259786780045CF6F /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ThirdParty/SDL2_image.framework; sourceTree = "<group>"; };
 		5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
 		5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */,
 				5EDB0D192597919B0045CF6F /* BGSpriteComponent.cpp */,
 				5EDB0D1A2597919B0045CF6F /* BGSpriteComponent.hpp */,
+				5EA6AF2C2597970800FC6949 /* Ship.cpp */,
+				5EA6AF2D2597970800FC6949 /* Ship.hpp */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA6AF2E2597970800FC6949 /* Ship.cpp in Sources */,
 				5E72025225964DE60050E871 /* Actor.cpp in Sources */,
 				5EDB0D1B2597919B0045CF6F /* BGSpriteComponent.cpp in Sources */,
 				5E720255259651270050E871 /* Component.cpp in Sources */,

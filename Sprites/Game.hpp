@@ -14,6 +14,7 @@
 #include "SDL.h"
 #include "Math.hpp"
 #include "SpriteComponent.hpp"
+#include "Ship.hpp"
 
 // Game class
 class Game
@@ -32,11 +33,12 @@ public:
     
     void AddSprite(SpriteComponent* sprite);
     void RemoveSprite(SpriteComponent* sprite);
+    
+    SDL_Texture* GetTexture(const std::string& fileName);
 private:
     void LoadData();
     void UnloadData();
     SDL_Texture* LoadTexture(const char* fileName);
-    SDL_Texture* GetTexture(const std::string& fileName);
     
     // 处理进程输入
     void ProcessInput();
@@ -66,6 +68,9 @@ private:
     
     // 已加载的 textures
     std::unordered_map<std::string, SDL_Texture*> mTextures;
+    
+    // 玩家控制的飞船
+    class Ship* mShip;
 };
 
 #endif /* Game_hpp */
