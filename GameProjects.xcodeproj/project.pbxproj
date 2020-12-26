@@ -28,9 +28,26 @@
 		5EA6AF2A2597958C00FC6949 /* Farback02.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF192597956300FC6949 /* Farback02.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5EA6AF2B2597959A00FC6949 /* Stars.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF232597956300FC6949 /* Stars.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5EA6AF2E2597970800FC6949 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF2C2597970800FC6949 /* Ship.cpp */; };
-		5EA6AF3625979B5A00FC6949 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF3525979B5A00FC6949 /* main.cpp */; };
 		5EA6AF4125979B7E00FC6949 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF4025979B7E00FC6949 /* main.cpp */; };
 		5EA6AF4C25979B9900FC6949 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF4B25979B9900FC6949 /* main.cpp */; };
+		5EA6AF6625979D4C00FC6949 /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF5125979D4C00FC6949 /* AnimSpriteComponent.cpp */; };
+		5EA6AF6725979D4C00FC6949 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF5A25979D4C00FC6949 /* Component.cpp */; };
+		5EA6AF6825979D4C00FC6949 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF5B25979D4C00FC6949 /* Game.cpp */; };
+		5EA6AF6925979D4C00FC6949 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF5C25979D4C00FC6949 /* main.cpp */; };
+		5EA6AF6A25979D4D00FC6949 /* BGSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF5E25979D4C00FC6949 /* BGSpriteComponent.cpp */; };
+		5EA6AF6B25979D4D00FC6949 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF5F25979D4C00FC6949 /* Math.cpp */; };
+		5EA6AF6C25979D4D00FC6949 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF6025979D4C00FC6949 /* Ship.cpp */; };
+		5EA6AF6D25979D4D00FC6949 /* SpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF6225979D4C00FC6949 /* SpriteComponent.cpp */; };
+		5EA6AF6E25979D4D00FC6949 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF6425979D4C00FC6949 /* Actor.cpp */; };
+		5EA6AF6F25979ED900FC6949 /* Asteroid.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF5625979D4C00FC6949 /* Asteroid.png */; };
+		5EA6AF7025979ED900FC6949 /* Laser.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF5725979D4C00FC6949 /* Laser.png */; };
+		5EA6AF7125979ED900FC6949 /* Ship.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF5825979D4C00FC6949 /* Ship.png */; };
+		5EA6AF7225979ED900FC6949 /* ShipWithThrust.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF5925979D4C00FC6949 /* ShipWithThrust.png */; };
+		5EA6AF7A2597A84400FC6949 /* MoveComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF782597A84400FC6949 /* MoveComponent.cpp */; };
+		5EA6AF7D2597AB1100FC6949 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
+		5EA6AF7E2597AB1100FC6949 /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5EA6AF7F2597AB1100FC6949 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
+		5EA6AF802597AB1100FC6949 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5EDB0D1325978A950045CF6F /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
 		5EDB0D1425978A950045CF6F /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */; };
@@ -74,12 +91,16 @@
 		};
 		5EA6AF3125979B5A00FC6949 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = Assets;
+			dstSubfolderSpec = 16;
 			files = (
+				5EA6AF6F25979ED900FC6949 /* Asteroid.png in CopyFiles */,
+				5EA6AF7025979ED900FC6949 /* Laser.png in CopyFiles */,
+				5EA6AF7125979ED900FC6949 /* Ship.png in CopyFiles */,
+				5EA6AF7225979ED900FC6949 /* ShipWithThrust.png in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EA6AF3C25979B7E00FC6949 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -98,6 +119,18 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5EA6AF812597AB1100FC6949 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5EA6AF7E2597AB1100FC6949 /* SDL2_image.framework in Embed Frameworks */,
+				5EA6AF802597AB1100FC6949 /* SDL2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EDB0D1525978A950045CF6F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -145,11 +178,33 @@
 		5EA6AF2C2597970800FC6949 /* Ship.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
 		5EA6AF2D2597970800FC6949 /* Ship.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ship.hpp; sourceTree = "<group>"; };
 		5EA6AF3325979B5A00FC6949 /* BasicPhysics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BasicPhysics; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EA6AF3525979B5A00FC6949 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5EA6AF3E25979B7E00FC6949 /* GameAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA6AF4025979B7E00FC6949 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5EA6AF4925979B9900FC6949 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA6AF4B25979B9900FC6949 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5EA6AF5025979D4C00FC6949 /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		5EA6AF5125979D4C00FC6949 /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
+		5EA6AF5225979D4C00FC6949 /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
+		5EA6AF5325979D4C00FC6949 /* BGSpriteComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BGSpriteComponent.hpp; sourceTree = "<group>"; };
+		5EA6AF5425979D4C00FC6949 /* SpriteComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteComponent.hpp; sourceTree = "<group>"; };
+		5EA6AF5625979D4C00FC6949 /* Asteroid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Asteroid.png; sourceTree = "<group>"; };
+		5EA6AF5725979D4C00FC6949 /* Laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Laser.png; sourceTree = "<group>"; };
+		5EA6AF5825979D4C00FC6949 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
+		5EA6AF5925979D4C00FC6949 /* ShipWithThrust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShipWithThrust.png; sourceTree = "<group>"; };
+		5EA6AF5A25979D4C00FC6949 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		5EA6AF5B25979D4C00FC6949 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		5EA6AF5C25979D4C00FC6949 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5EA6AF5D25979D4C00FC6949 /* Math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
+		5EA6AF5E25979D4C00FC6949 /* BGSpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BGSpriteComponent.cpp; sourceTree = "<group>"; };
+		5EA6AF5F25979D4C00FC6949 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
+		5EA6AF6025979D4C00FC6949 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
+		5EA6AF6125979D4C00FC6949 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		5EA6AF6225979D4C00FC6949 /* SpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteComponent.cpp; sourceTree = "<group>"; };
+		5EA6AF6325979D4C00FC6949 /* Ship.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ship.hpp; sourceTree = "<group>"; };
+		5EA6AF6425979D4C00FC6949 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		5EA6AF6525979D4C00FC6949 /* Actor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
+		5EA6AF782597A84400FC6949 /* MoveComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveComponent.cpp; sourceTree = "<group>"; };
+		5EA6AF792597A84400FC6949 /* MoveComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MoveComponent.hpp; sourceTree = "<group>"; };
 		5EDB0D0E259786780045CF6F /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ThirdParty/SDL2_image.framework; sourceTree = "<group>"; };
 		5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
 		5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
@@ -187,6 +242,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA6AF7D2597AB1100FC6949 /* SDL2_image.framework in Frameworks */,
+				5EA6AF7F2597AB1100FC6949 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +371,26 @@
 		5EA6AF3425979B5A00FC6949 /* BasicPhysics */ = {
 			isa = PBXGroup;
 			children = (
-				5EA6AF3525979B5A00FC6949 /* main.cpp */,
+				5EA6AF6425979D4C00FC6949 /* Actor.cpp */,
+				5EA6AF6525979D4C00FC6949 /* Actor.hpp */,
+				5EA6AF5125979D4C00FC6949 /* AnimSpriteComponent.cpp */,
+				5EA6AF5225979D4C00FC6949 /* AnimSpriteComponent.hpp */,
+				5EA6AF5525979D4C00FC6949 /* Assets */,
+				5EA6AF5E25979D4C00FC6949 /* BGSpriteComponent.cpp */,
+				5EA6AF5325979D4C00FC6949 /* BGSpriteComponent.hpp */,
+				5EA6AF5A25979D4C00FC6949 /* Component.cpp */,
+				5EA6AF5025979D4C00FC6949 /* Component.hpp */,
+				5EA6AF5B25979D4C00FC6949 /* Game.cpp */,
+				5EA6AF6125979D4C00FC6949 /* Game.hpp */,
+				5EA6AF5C25979D4C00FC6949 /* main.cpp */,
+				5EA6AF5F25979D4C00FC6949 /* Math.cpp */,
+				5EA6AF5D25979D4C00FC6949 /* Math.hpp */,
+				5EA6AF6025979D4C00FC6949 /* Ship.cpp */,
+				5EA6AF6325979D4C00FC6949 /* Ship.hpp */,
+				5EA6AF6225979D4C00FC6949 /* SpriteComponent.cpp */,
+				5EA6AF5425979D4C00FC6949 /* SpriteComponent.hpp */,
+				5EA6AF782597A84400FC6949 /* MoveComponent.cpp */,
+				5EA6AF792597A84400FC6949 /* MoveComponent.hpp */,
 			);
 			path = BasicPhysics;
 			sourceTree = "<group>";
@@ -333,6 +409,17 @@
 				5EA6AF4B25979B9900FC6949 /* main.cpp */,
 			);
 			path = OpenGL;
+			sourceTree = "<group>";
+		};
+		5EA6AF5525979D4C00FC6949 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5EA6AF5625979D4C00FC6949 /* Asteroid.png */,
+				5EA6AF5725979D4C00FC6949 /* Laser.png */,
+				5EA6AF5825979D4C00FC6949 /* Ship.png */,
+				5EA6AF5925979D4C00FC6949 /* ShipWithThrust.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +484,7 @@
 				5EA6AF2F25979B5A00FC6949 /* Sources */,
 				5EA6AF3025979B5A00FC6949 /* Frameworks */,
 				5EA6AF3125979B5A00FC6949 /* CopyFiles */,
+				5EA6AF812597AB1100FC6949 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -532,7 +620,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EA6AF3625979B5A00FC6949 /* main.cpp in Sources */,
+				5EA6AF6E25979D4D00FC6949 /* Actor.cpp in Sources */,
+				5EA6AF6825979D4C00FC6949 /* Game.cpp in Sources */,
+				5EA6AF6625979D4C00FC6949 /* AnimSpriteComponent.cpp in Sources */,
+				5EA6AF6925979D4C00FC6949 /* main.cpp in Sources */,
+				5EA6AF6B25979D4D00FC6949 /* Math.cpp in Sources */,
+				5EA6AF6725979D4C00FC6949 /* Component.cpp in Sources */,
+				5EA6AF6A25979D4D00FC6949 /* BGSpriteComponent.cpp in Sources */,
+				5EA6AF6D25979D4D00FC6949 /* SpriteComponent.cpp in Sources */,
+				5EA6AF7A2597A84400FC6949 /* MoveComponent.cpp in Sources */,
+				5EA6AF6C25979D4D00FC6949 /* Ship.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +861,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ThirdParty/SDL2.framework/Headers/",
+					"$(PROJECT_DIR)/ThirdParty/SDL2_image.framework/Headers/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -772,6 +877,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ThirdParty/SDL2.framework/Headers/",
+					"$(PROJECT_DIR)/ThirdParty/SDL2_image.framework/Headers/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
