@@ -14,7 +14,6 @@ Game::Game()
 ,mRenderer(nullptr)
 ,mIsRunning(true)
 ,mTicksCount(0)
-,mPaddleDir(0)
 {
     
 }
@@ -63,33 +62,69 @@ bool Game::Initialize()
         return false;
     }
     
-    SDL_Texture* tex = LoadTexture("test.png");
-    SDL_RenderCopy(mRenderer, tex, 0, 0);
-    SDL_RenderPresent(mRenderer);
-    
+    LoadData();
+    mTicksCount = SDL_GetTicks();
     return true;
+}
+
+void Game::LoadData()
+{
+    
 }
 
 SDL_Texture* Game::LoadTexture(const char* fileName)
 {
-  // 从文件中加载
-  SDL_Surface* surf = IMG_Load(fileName);
-  
-  if (!surf)
-  {
-    SDL_Log("加载图像文件 %s 失败", fileName);
-    return nullptr;
-  }
+    // 从文件中加载
+    SDL_Surface* surf = IMG_Load(fileName);
     
-  // 从 surface 创建 texture
-  SDL_Texture* tex = SDL_CreateTextureFromSurface(mRenderer, surf);
-  SDL_FreeSurface(surf);
-  if (!tex)
-  {
-    SDL_Log("%s surface 转换到 texture 失败!", fileName);
-    return nullptr;
-  }
-  return tex;
+    if (!surf)
+    {
+        SDL_Log("加载图像文件 %s 失败", fileName);
+        return nullptr;
+    }
+    
+    // 从 surface 创建 texture
+    SDL_Texture* tex = SDL_CreateTextureFromSurface(mRenderer, surf);
+    SDL_FreeSurface(surf);
+    if (!tex)
+    {
+        SDL_Log("%s surface 转换到 texture 失败!", fileName);
+        return nullptr;
+    }
+    return tex;
+}
+
+SDL_Texture* Game::GetTexture(const std::string& fileName)
+{
+    SDL_Texture* tex = nullptr;
+    // texture是否已经存在？
+    auto iter = mTextures.find(fileName);
+    if (iter != mTextures.end())
+    {
+        tex = iter->second;
+    }
+    else
+    {
+        // 从文件中加载
+        SDL_Surface* surf = IMG_Load(fileName.c_str());
+        if (!surf)
+        {
+            SDL_Log("加载texture文件%s失败", fileName.c_str());
+            return nullptr;
+        }
+        
+        // 从 surface 中创建 textures
+        tex = SDL_CreateTextureFromSurface(mRenderer, surf);
+        SDL_FreeSurface(surf);
+        if (!tex)
+        {
+            SDL_Log("无法把%s从surface转化到texture", fileName.c_str());
+            return nullptr;
+        }
+        
+        mTextures.emplace(fileName.c_str(), tex);
+    }
+    return tex;
 }
 
 void Game::Shutdown()
@@ -132,7 +167,7 @@ void Game::ProcessInput() {
     {
         mIsRunning = false;
     }
-
+    
 }
 
 void Game::UpdateGame()
@@ -158,17 +193,17 @@ void Game::UpdateGame()
 
 void Game::GenerateOutput()
 {
-//    SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
-//    SDL_RenderClear(mRenderer);
-//
-//    // 绘制所有精灵组件
-//    for (auto sprite : mSprites)
-//    {
-//        sprite->Draw(mRenderer);
-//
-//    }
-//
-//    SDL_RenderPresent(mRenderer);
+    SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
+    SDL_RenderClear(mRenderer);
+    
+    // 绘制所有精灵组件
+    for (auto sprite : mSprites)
+    {
+        sprite->Draw(mRenderer);
+        
+    }
+    
+    SDL_RenderPresent(mRenderer);
     
 }
 

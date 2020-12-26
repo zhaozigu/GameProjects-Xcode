@@ -10,6 +10,7 @@
 #define Game_hpp
 #include <vector>
 #include <string>
+#include <unordered_map>
 #include "SDL.h"
 #include "Math.hpp"
 #include "SpriteComponent.hpp"
@@ -32,7 +33,9 @@ public:
     void AddSprite(SpriteComponent* sprite);
     void RemoveSprite(SpriteComponent* sprite);
 private:
+    void LoadData();
     SDL_Texture* LoadTexture(const char* fileName);
+    SDL_Texture* GetTexture(const std::string& fileName);
     
     // 处理进程输入
     void ProcessInput();
@@ -48,17 +51,6 @@ private:
     // 继续运行
     bool mIsRunning;
     
-    // 球拍位置
-    Vector2 mPaddlePos;
-    // 球的位置
-    Vector2 mBallPos;
-    
-    // 球拍方向
-    int mPaddleDir;
-    
-    // 球的速度
-    Vector2 mBallVel;
-    
     // 记录运行时间
     Uint32 mTicksCount;
     
@@ -70,6 +62,9 @@ private:
     std::vector<class Actor*> mPendingActors;
     // 跟踪现在是否在更新actor
     bool mUpdatingActors;
+    
+    // 已加载的 textures
+    std::unordered_map<std::string, SDL_Texture*> mTextures;
 };
 
 #endif /* Game_hpp */
