@@ -70,46 +70,46 @@ bool Game::Initialize()
 }
 
 void Game::LoadData() {
-  // 为背景创建 actor (不需要子类)
-  Actor* temp = new Actor(this);
-  temp->SetPosition(Vector2(512.0f, 384.0f));
-  
-  // 创建一个遥远的深层背景
-  BGSpriteComponent* bg = new BGSpriteComponent(temp);
-  bg->SetScreenSize(Vector2(1024.0f, 768.0f));
-  std::vector<SDL_Texture*> bgtexs = {
-    GetTexture("Assets/Farback01.png"),
-    GetTexture("Assets/Farback02.png")
-  };
-  bg->SetBGTextures(bgtexs);
-  bg->SetScrollSpeed(-100.0f);
-  
-  // 创建一个更近的背景
-  bg = new BGSpriteComponent(temp, 50);
-  bg->SetScreenSize(Vector2(1024.0f, 768.0f));
-  bgtexs = {
-    GetTexture("Assets/Stars.png"),
-    GetTexture("Assets/Stars.png")
-  };
-  bg->SetBGTextures(bgtexs);
-  bg->SetScrollSpeed(-200.0f);
+    // 为背景创建 actor (不需要子类)
+    Actor* temp = new Actor(this);
+    temp->SetPosition(Vector2(512.0f, 384.0f));
+    
+    // 创建一个遥远的深层背景
+    BGSpriteComponent* bg = new BGSpriteComponent(temp);
+    bg->SetScreenSize(Vector2(1024.0f, 768.0f));
+    std::vector<SDL_Texture*> bgtexs = {
+        GetTexture("Assets/Farback01.png"),
+        GetTexture("Assets/Farback02.png")
+    };
+    bg->SetBGTextures(bgtexs);
+    bg->SetScrollSpeed(-100.0f);
+    
+    // 创建一个更近的背景
+    bg = new BGSpriteComponent(temp, 50);
+    bg->SetScreenSize(Vector2(1024.0f, 768.0f));
+    bgtexs = {
+        GetTexture("Assets/Stars.png"),
+        GetTexture("Assets/Stars.png")
+    };
+    bg->SetBGTextures(bgtexs);
+    bg->SetScrollSpeed(-200.0f);
 }
 
 void Game::UnloadData()
 {
-  // 删除actor
-  // 因为~Actor调用RemoveActor，所以必须使用循环
-  while (!mActors.empty())
-  {
-    delete mActors.back();
-  }
-  
-  // 销毁texture
-  for (auto i : mTextures)
-  {
-    SDL_DestroyTexture(i.second);
-  }
-  mTextures.clear();
+    // 删除actor
+    // 因为~Actor调用RemoveActor，所以必须使用循环
+    while (!mActors.empty())
+    {
+        delete mActors.back();
+    }
+    
+    // 销毁texture
+    for (auto i : mTextures)
+    {
+        SDL_DestroyTexture(i.second);
+    }
+    mTextures.clear();
 }
 
 SDL_Texture* Game::LoadTexture(const char* fileName)
@@ -214,20 +214,47 @@ void Game::ProcessInput() {
 
 void Game::UpdateGame()
 {
-    // 等到与上一帧间隔 16ms
+    // 计算增量时间
+    // 等待16ms
     while (!SDL_TICKS_PASSED(SDL_GetTicks(), mTicksCount + 16))
         ;
     
-    // 增量时间是上一帧到现在的时间差
-    // (转换成秒)
     float deltaTime = (SDL_GetTicks() - mTicksCount) / 1000.0f;
-    
-    // 更新运行时间(为下一帧)
-    mTicksCount = SDL_GetTicks();
-    // 固定增量时间最大值
     if (deltaTime > 0.05f)
     {
         deltaTime = 0.05f;
+    }
+    mTicksCount = SDL_GetTicks();
+    
+    // 更新所有actor
+    mUpdatingActors = true;
+    for (auto actor : mActors)
+    {
+        actor->Update(deltaTime);
+    }
+    mUpdatingActors = false;
+    
+    // 移动待定actor到mActors
+    for (auto pending : mPendingActors)
+    {
+        mActors.emplace_back(pending);
+    }
+    mPendingActors.clear();
+    
+    // 添加 dead actor 到临时向量
+    std::vector<Actor*> deadActors;
+    for (auto actor : mActors)
+    {
+        if (actor->GetState() == Actor::EDead)
+        {
+            deadActors.emplace_back(actor);
+        }
+    }
+    
+    // 删除处于dead的actor（从mActors中移除)
+    for (auto actor : deadActors)
+    {
+        delete actor;
     }
     
 }
