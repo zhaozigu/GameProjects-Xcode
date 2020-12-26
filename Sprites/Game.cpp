@@ -8,6 +8,8 @@
 
 #include "Game.hpp"
 #include "SDL_image.h"
+#include "Actor.hpp"
+#include "BGSpriteComponent.hpp"
 
 Game::Game()
 :mWindow(nullptr)
@@ -67,9 +69,47 @@ bool Game::Initialize()
     return true;
 }
 
-void Game::LoadData()
+void Game::LoadData() {
+  // 为背景创建 actor (不需要子类)
+  Actor* temp = new Actor(this);
+  temp->SetPosition(Vector2(512.0f, 384.0f));
+  
+  // 创建一个遥远的深层背景
+  BGSpriteComponent* bg = new BGSpriteComponent(temp);
+  bg->SetScreenSize(Vector2(1024.0f, 768.0f));
+  std::vector<SDL_Texture*> bgtexs = {
+    GetTexture("Assets/Farback01.png"),
+    GetTexture("Assets/Farback02.png")
+  };
+  bg->SetBGTextures(bgtexs);
+  bg->SetScrollSpeed(-100.0f);
+  
+  // 创建一个更近的背景
+  bg = new BGSpriteComponent(temp, 50);
+  bg->SetScreenSize(Vector2(1024.0f, 768.0f));
+  bgtexs = {
+    GetTexture("Assets/Stars.png"),
+    GetTexture("Assets/Stars.png")
+  };
+  bg->SetBGTextures(bgtexs);
+  bg->SetScrollSpeed(-200.0f);
+}
+
+void Game::UnloadData()
 {
-    
+  // 删除actor
+  // 因为~Actor调用RemoveActor，所以必须使用循环
+  while (!mActors.empty())
+  {
+    delete mActors.back();
+  }
+  
+  // 销毁texture
+  for (auto i : mTextures)
+  {
+    SDL_DestroyTexture(i.second);
+  }
+  mTextures.clear();
 }
 
 SDL_Texture* Game::LoadTexture(const char* fileName)
@@ -129,6 +169,8 @@ SDL_Texture* Game::GetTexture(const std::string& fileName)
 
 void Game::Shutdown()
 {
+    UnloadData();
+    IMG_Quit();
     SDL_DestroyRenderer(mRenderer);
     SDL_DestroyWindow(mWindow);
     SDL_Quit();

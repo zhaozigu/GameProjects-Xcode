@@ -20,6 +20,13 @@
 		5E79BCE72594E6EF00B79CC3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
 		5EA1877C2594EDD3003153A1 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E79BCE82594EAFD00B79CC3 /* Game.cpp */; };
 		5EA1877F2594EDE1003153A1 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1877D2594EDE1003153A1 /* Game.cpp */; };
+		5EA6AF252597957800FC6949 /* Ship01.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF1F2597956300FC6949 /* Ship01.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5EA6AF262597957800FC6949 /* Ship02.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF202597956300FC6949 /* Ship02.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5EA6AF272597957800FC6949 /* Ship03.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF212597956300FC6949 /* Ship03.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5EA6AF282597957800FC6949 /* Ship04.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF222597956300FC6949 /* Ship04.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5EA6AF292597958C00FC6949 /* Farback01.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF182597956300FC6949 /* Farback01.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5EA6AF2A2597958C00FC6949 /* Farback02.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF192597956300FC6949 /* Farback02.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5EA6AF2B2597959A00FC6949 /* Stars.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA6AF232597956300FC6949 /* Stars.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5EDB0D1325978A950045CF6F /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
 		5EDB0D1425978A950045CF6F /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */; };
@@ -29,12 +36,19 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		5E7202432596481B0050E871 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = Assets;
+			dstSubfolderSpec = 16;
 			files = (
+				5EA6AF2B2597959A00FC6949 /* Stars.png in CopyFiles */,
+				5EA6AF292597958C00FC6949 /* Farback01.png in CopyFiles */,
+				5EA6AF2A2597958C00FC6949 /* Farback02.png in CopyFiles */,
+				5EA6AF252597957800FC6949 /* Ship01.png in CopyFiles */,
+				5EA6AF262597957800FC6949 /* Ship02.png in CopyFiles */,
+				5EA6AF272597957800FC6949 /* Ship03.png in CopyFiles */,
+				5EA6AF282597957800FC6949 /* Ship04.png in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5E79BCD02594E38D00B79CC3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -90,6 +104,13 @@
 		5EA1877D2594EDE1003153A1 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		5EA1877E2594EDE1003153A1 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		5EA187802594F406003153A1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		5EA6AF182597956300FC6949 /* Farback01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Farback01.png; sourceTree = "<group>"; };
+		5EA6AF192597956300FC6949 /* Farback02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Farback02.png; sourceTree = "<group>"; };
+		5EA6AF1F2597956300FC6949 /* Ship01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship01.png; sourceTree = "<group>"; };
+		5EA6AF202597956300FC6949 /* Ship02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship02.png; sourceTree = "<group>"; };
+		5EA6AF212597956300FC6949 /* Ship03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship03.png; sourceTree = "<group>"; };
+		5EA6AF222597956300FC6949 /* Ship04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship04.png; sourceTree = "<group>"; };
+		5EA6AF232597956300FC6949 /* Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stars.png; sourceTree = "<group>"; };
 		5EDB0D0E259786780045CF6F /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ThirdParty/SDL2_image.framework; sourceTree = "<group>"; };
 		5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
 		5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
@@ -129,6 +150,7 @@
 		5E7202462596481B0050E871 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				5EA6AEFE2597956300FC6949 /* Assets */,
 				5E7202472596481B0050E871 /* main.cpp */,
 				5E72024D259648E50050E871 /* Game.cpp */,
 				5E72024E259648E50050E871 /* Game.hpp */,
@@ -151,7 +173,7 @@
 		5E79BCBA2594DDF500B79CC3 = {
 			isa = PBXGroup;
 			children = (
-				5EA187812594F65F003153A1 /* ProjectConfig */,
+				5EA187812594F65F003153A1 /* Config */,
 				5E79BCDE2594E46C00B79CC3 /* GameEnvironment */,
 				5E79BCD32594E38D00B79CC3 /* PingPong */,
 				5E7202462596481B0050E871 /* Sprites */,
@@ -199,12 +221,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5EA187812594F65F003153A1 /* ProjectConfig */ = {
+		5EA187812594F65F003153A1 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				5EA187802594F406003153A1 /* Config.xcconfig */,
 			);
-			path = ProjectConfig;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5EA6AEFE2597956300FC6949 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5EA6AF182597956300FC6949 /* Farback01.png */,
+				5EA6AF192597956300FC6949 /* Farback02.png */,
+				5EA6AF1F2597956300FC6949 /* Ship01.png */,
+				5EA6AF202597956300FC6949 /* Ship02.png */,
+				5EA6AF212597956300FC6949 /* Ship03.png */,
+				5EA6AF222597956300FC6949 /* Ship04.png */,
+				5EA6AF232597956300FC6949 /* Stars.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

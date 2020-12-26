@@ -34,6 +34,7 @@ public:
     void RemoveSprite(SpriteComponent* sprite);
 private:
     void LoadData();
+    void UnloadData();
     SDL_Texture* LoadTexture(const char* fileName);
     SDL_Texture* GetTexture(const std::string& fileName);
     
