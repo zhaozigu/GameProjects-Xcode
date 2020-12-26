@@ -10,6 +10,7 @@
 #include "SDL_image.h"
 #include "Actor.hpp"
 #include "BGSpriteComponent.hpp"
+#include "Asteroid.hpp"
 
 Game::Game()
 :mWindow(nullptr)
@@ -70,34 +71,13 @@ bool Game::Initialize()
 }
 
 void Game::LoadData() {
-    // 创建一个飞船player
-     mShip = new Ship(this);
-     mShip->SetPosition(Vector2(100.0f, 384.0f));
-     mShip->SetScale(1.5f);
-    
-    // 为背景创建 actor (不需要子类)
-    Actor* temp = new Actor(this);
-    temp->SetPosition(Vector2(512.0f, 384.0f));
-    
-    // 创建一个遥远的深层背景
-    BGSpriteComponent* bg = new BGSpriteComponent(temp);
-    bg->SetScreenSize(Vector2(1024.0f, 768.0f));
-    std::vector<SDL_Texture*> bgtexs = {
-        GetTexture("Assets/Farback01.png"),
-        GetTexture("Assets/Farback02.png")
-    };
-    bg->SetBGTextures(bgtexs);
-    bg->SetScrollSpeed(-100.0f);
-    
-    // 创建一个更近的背景
-    bg = new BGSpriteComponent(temp, 50);
-    bg->SetScreenSize(Vector2(1024.0f, 768.0f));
-    bgtexs = {
-        GetTexture("Assets/Stars.png"),
-        GetTexture("Assets/Stars.png")
-    };
-    bg->SetBGTextures(bgtexs);
-    bg->SetScrollSpeed(-200.0f);
+    // 创建行星
+    const int kNumAsteroids = 20;
+    for (int i = 0; i < kNumAsteroids; i++)
+    {
+        // leakage
+        new Asteroid(this);
+    }
 }
 
 void Game::UnloadData()
@@ -214,9 +194,6 @@ void Game::ProcessInput() {
     {
         mIsRunning = false;
     }
-    
-    // 处理飞船的输入
-    mShip->ProcessKeyboard(state);
 }
 
 void Game::UpdateGame()
@@ -269,7 +246,7 @@ void Game::UpdateGame()
 
 void Game::GenerateOutput()
 {
-    SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
+    SDL_SetRenderDrawColor(mRenderer, 220, 220, 220, 255);
     SDL_RenderClear(mRenderer);
     
     // 绘制所有精灵组件
