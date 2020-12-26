@@ -23,6 +23,7 @@
 		5EDB0D1325978A950045CF6F /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
 		5EDB0D1425978A950045CF6F /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */; };
+		5EDB0D1B2597919B0045CF6F /* BGSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0D192597919B0045CF6F /* BGSpriteComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,6 +93,8 @@
 		5EDB0D0E259786780045CF6F /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ThirdParty/SDL2_image.framework; sourceTree = "<group>"; };
 		5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
 		5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
+		5EDB0D192597919B0045CF6F /* BGSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BGSpriteComponent.cpp; sourceTree = "<group>"; };
+		5EDB0D1A2597919B0045CF6F /* BGSpriteComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BGSpriteComponent.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				5E72025D259654980050E871 /* SpriteComponent.hpp */,
 				5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */,
 				5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */,
+				5EDB0D192597919B0045CF6F /* BGSpriteComponent.cpp */,
+				5EDB0D1A2597919B0045CF6F /* BGSpriteComponent.hpp */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E72025225964DE60050E871 /* Actor.cpp in Sources */,
+				5EDB0D1B2597919B0045CF6F /* BGSpriteComponent.cpp in Sources */,
 				5E720255259651270050E871 /* Component.cpp in Sources */,
 				5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */,
 				5E72025E259654980050E871 /* SpriteComponent.cpp in Sources */,
