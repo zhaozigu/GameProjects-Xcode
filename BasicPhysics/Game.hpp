@@ -15,6 +15,7 @@
 #include "Math.hpp"
 #include "SpriteComponent.hpp"
 #include "Ship.hpp"
+#include "Asteroid.hpp"
 
 // Game class
 class Game
@@ -35,6 +36,10 @@ public:
     void RemoveSprite(SpriteComponent* sprite);
     
     SDL_Texture* GetTexture(const std::string& fileName);
+    
+    void AddAsteroid(class Asteroid* ast);
+    void RemoveAsteroid(class Asteroid* ast);
+    std::vector<class Asteroid*>& GetAsteroids() { return mAsteroids; }
 private:
     void LoadData();
     void UnloadData();
@@ -71,6 +76,7 @@ private:
     
     // 玩家控制的飞船
     class Ship* mShip;
+    std::vector<class Asteroid*> mAsteroids;
 };
 
 #endif /* Game_hpp */

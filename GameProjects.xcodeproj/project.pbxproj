@@ -51,6 +51,8 @@
 		5EA6AF842597B08400FC6949 /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF822597B08400FC6949 /* Asteroid.cpp */; };
 		5EA6AF872597B2A000FC6949 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF852597B2A000FC6949 /* Random.cpp */; };
 		5EBFFB042598548700A5A7B9 /* InputComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFFB022598548700A5A7B9 /* InputComponent.cpp */; };
+		5EBFFB08259871CE00A5A7B9 /* CircleComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFFB06259871CE00A5A7B9 /* CircleComponent.cpp */; };
+		5EBFFB0B25987CC800A5A7B9 /* Laser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFFB0925987CC800A5A7B9 /* Laser.cpp */; };
 		5EDB0D1325978A950045CF6F /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
 		5EDB0D1425978A950045CF6F /* SDL2_image.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5EDB0D1825978FF90045CF6F /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */; };
@@ -214,6 +216,10 @@
 		5EA6AF862597B2A000FC6949 /* Random.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Random.hpp; sourceTree = "<group>"; };
 		5EBFFB022598548700A5A7B9 /* InputComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputComponent.cpp; sourceTree = "<group>"; };
 		5EBFFB032598548700A5A7B9 /* InputComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputComponent.hpp; sourceTree = "<group>"; };
+		5EBFFB06259871CE00A5A7B9 /* CircleComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircleComponent.cpp; sourceTree = "<group>"; };
+		5EBFFB07259871CE00A5A7B9 /* CircleComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircleComponent.hpp; sourceTree = "<group>"; };
+		5EBFFB0925987CC800A5A7B9 /* Laser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Laser.cpp; sourceTree = "<group>"; };
+		5EBFFB0A25987CC800A5A7B9 /* Laser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Laser.hpp; sourceTree = "<group>"; };
 		5EDB0D0E259786780045CF6F /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ThirdParty/SDL2_image.framework; sourceTree = "<group>"; };
 		5EDB0D1625978FF90045CF6F /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
 		5EDB0D1725978FF90045CF6F /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
@@ -406,6 +412,10 @@
 				5EA6AF832597B08400FC6949 /* Asteroid.hpp */,
 				5EA6AF852597B2A000FC6949 /* Random.cpp */,
 				5EA6AF862597B2A000FC6949 /* Random.hpp */,
+				5EBFFB06259871CE00A5A7B9 /* CircleComponent.cpp */,
+				5EBFFB07259871CE00A5A7B9 /* CircleComponent.hpp */,
+				5EBFFB0925987CC800A5A7B9 /* Laser.cpp */,
+				5EBFFB0A25987CC800A5A7B9 /* Laser.hpp */,
 			);
 			path = BasicPhysics;
 			sourceTree = "<group>";
@@ -636,6 +646,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBFFB042598548700A5A7B9 /* InputComponent.cpp in Sources */,
+				5EBFFB08259871CE00A5A7B9 /* CircleComponent.cpp in Sources */,
 				5EA6AF872597B2A000FC6949 /* Random.cpp in Sources */,
 				5EA6AF6E25979D4D00FC6949 /* Actor.cpp in Sources */,
 				5EA6AF6825979D4C00FC6949 /* Game.cpp in Sources */,
@@ -643,6 +654,7 @@
 				5EA6AF6925979D4C00FC6949 /* main.cpp in Sources */,
 				5EA6AF6B25979D4D00FC6949 /* Math.cpp in Sources */,
 				5EA6AF6725979D4C00FC6949 /* Component.cpp in Sources */,
+				5EBFFB0B25987CC800A5A7B9 /* Laser.cpp in Sources */,
 				5EA6AF6A25979D4D00FC6949 /* BGSpriteComponent.cpp in Sources */,
 				5EA6AF842597B08400FC6949 /* Asteroid.cpp in Sources */,
 				5EA6AF6D25979D4D00FC6949 /* SpriteComponent.cpp in Sources */,

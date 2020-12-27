@@ -15,6 +15,7 @@ Asteroid::Asteroid(Game* game)
     :Actor(game)
     , sc(new SpriteComponent(this))
     , mc(new MoveComponent(this))
+    , mCircle(new CircleComponent(this))
 {
     // 初始化一个随机的位置和方向
     Vector2 randPos = Random::GetVector(Vector2::Zero,
@@ -25,10 +26,18 @@ Asteroid::Asteroid(Game* game)
 
     sc->SetTexture(game->GetTexture("Assets/Asteroid.png"));
     mc->SetForwardSpeed(150.0f);
+    
+    // 设置半径
+    mCircle->SetRadius(40.0f);
+
+    // 添加到 Game 中
+    game->AddAsteroid(this);
 }
 
 Asteroid::~Asteroid()
 {
+    GetGame()->RemoveAsteroid(this);
+    if (mCircle) delete mCircle;
     if (sc) delete sc;
     if (mc) delete mc;
 }
