@@ -71,6 +71,11 @@ bool Game::Initialize()
 }
 
 void Game::LoadData() {
+    // 玩家控制的飞船
+    mShip = new Ship(this); // leakage
+    mShip->SetPosition(Vector2(512.0f, 384.0f));
+    mShip->SetRotation(Math::PiOver2);
+    
     // 创建行星
     const int kNumAsteroids = 20;
     for (int i = 0; i < kNumAsteroids; i++)
@@ -188,12 +193,19 @@ void Game::ProcessInput() {
     }
     
     // 获取键盘的状态
-    const Uint8* state = SDL_GetKeyboardState(NULL);
+    const Uint8* keyState = SDL_GetKeyboardState(NULL);
     // 如果按了 Esc，结束循环
-    if (state[SDL_SCANCODE_ESCAPE])
+    if (keyState[SDL_SCANCODE_ESCAPE])
     {
         mIsRunning = false;
     }
+    
+    mUpdatingActors = true;
+    for (auto actor : mActors)
+    {
+        actor->ProcessInput(keyState);
+    }
+    mUpdatingActors = false;
 }
 
 void Game::UpdateGame()

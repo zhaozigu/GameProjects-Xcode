@@ -50,6 +50,11 @@ public:
     // 添加/移除 组件
     void AddComponent(class Component* component);
     void RemoveComponent(class Component* component);
+    
+    // 被 Game 调用的的 ProcessInput（不可重写）
+    void ProcessInput(const uint8_t* keyState);
+    // 特定 Actor 输入（可重写）
+    virtual void ActorInput(const uint8_t* keyState);
 private:
     // Actor的状态
     State mState;

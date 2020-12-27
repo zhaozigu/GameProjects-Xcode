@@ -10,18 +10,19 @@
 #define Ship_hpp
 
 #include "Actor.hpp"
+#include "SpriteComponent.hpp"
+#include "InputComponent.hpp"
 
 class Ship : public Actor
 {
 public:
-  Ship(class Game* game);
-  void UpdateActor(float deltaTime) override;
-  void ProcessKeyboard(const uint8_t* state);
-  float GetRightSpeed() const { return mRightSpeed; }
-  float GetDownSpeed() const { return mDownSpeed; }
+    Ship(class Game* game);
+    ~Ship();
+    void UpdateActor(float deltaTime) override;
+    void ActorInput(const uint8_t* keyState) override;
 private:
-  float mRightSpeed;
-  float mDownSpeed;
+    SpriteComponent* sc;
+    InputComponent* ic;
 };
 
 
