@@ -52,20 +52,18 @@
 		5EA6AF872597B2A000FC6949 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF852597B2A000FC6949 /* Random.cpp */; };
 		5EBBB97525A0377300225DF3 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB95425A0377100225DF3 /* Component.cpp */; };
 		5EBBB97625A0377300225DF3 /* CircleComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB95C25A0377100225DF3 /* CircleComponent.cpp */; };
-		5EBBB97725A0377300225DF3 /* Laser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB95E25A0377100225DF3 /* Laser.cpp */; };
 		5EBBB97825A0377300225DF3 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96125A0377200225DF3 /* Random.cpp */; };
-		5EBBB97925A0377300225DF3 /* AnimSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96225A0377200225DF3 /* AnimSpriteComponent.cpp */; };
 		5EBBB97A25A0377300225DF3 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96425A0377200225DF3 /* Game.cpp */; };
-		5EBBB97B25A0377300225DF3 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96525A0377200225DF3 /* Ship.cpp */; };
 		5EBBB97C25A0377300225DF3 /* MoveComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96625A0377200225DF3 /* MoveComponent.cpp */; };
-		5EBBB97D25A0377300225DF3 /* BGSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96725A0377200225DF3 /* BGSpriteComponent.cpp */; };
 		5EBBB97E25A0377300225DF3 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96825A0377200225DF3 /* Actor.cpp */; };
-		5EBBB97F25A0377300225DF3 /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96E25A0377200225DF3 /* Asteroid.cpp */; };
 		5EBBB98025A0377300225DF3 /* SpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB97025A0377200225DF3 /* SpriteComponent.cpp */; };
 		5EBBB98125A0377300225DF3 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB97225A0377300225DF3 /* Math.cpp */; };
 		5EBBB98225A0377300225DF3 /* InputComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB97425A0377300225DF3 /* InputComponent.cpp */; };
 		5EBBB98325A037A600225DF3 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB0D0E259786780045CF6F /* SDL2_image.framework */; };
 		5EBBB98425A037A600225DF3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; };
+		5EBBB98725A0388B00225DF3 /* AIComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB98525A0388B00225DF3 /* AIComponent.cpp */; };
+		5EBBB98A25A0427800225DF3 /* AIState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB98825A0427800225DF3 /* AIState.cpp */; };
+		5EBBB98C25A0639000225DF3 /* Search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB98B25A0639000225DF3 /* Search.cpp */; };
 		5EBFFB042598548700A5A7B9 /* InputComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFFB022598548700A5A7B9 /* InputComponent.cpp */; };
 		5EBFFB08259871CE00A5A7B9 /* CircleComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFFB06259871CE00A5A7B9 /* CircleComponent.cpp */; };
 		5EBFFB0B25987CC800A5A7B9 /* Laser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFFB0925987CC800A5A7B9 /* Laser.cpp */; };
@@ -238,30 +236,25 @@
 		5EBBB95A25A0377100225DF3 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
 		5EBBB95B25A0377100225DF3 /* ShipWithThrust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShipWithThrust.png; sourceTree = "<group>"; };
 		5EBBB95C25A0377100225DF3 /* CircleComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CircleComponent.cpp; sourceTree = "<group>"; };
-		5EBBB95D25A0377100225DF3 /* Ship.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ship.hpp; sourceTree = "<group>"; };
-		5EBBB95E25A0377100225DF3 /* Laser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Laser.cpp; sourceTree = "<group>"; };
 		5EBBB95F25A0377200225DF3 /* Math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
 		5EBBB96025A0377200225DF3 /* Actor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
 		5EBBB96125A0377200225DF3 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
-		5EBBB96225A0377200225DF3 /* AnimSpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimSpriteComponent.cpp; sourceTree = "<group>"; };
-		5EBBB96325A0377200225DF3 /* Asteroid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Asteroid.hpp; sourceTree = "<group>"; };
 		5EBBB96425A0377200225DF3 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		5EBBB96525A0377200225DF3 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
 		5EBBB96625A0377200225DF3 /* MoveComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveComponent.cpp; sourceTree = "<group>"; };
-		5EBBB96725A0377200225DF3 /* BGSpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BGSpriteComponent.cpp; sourceTree = "<group>"; };
 		5EBBB96825A0377200225DF3 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
-		5EBBB96925A0377200225DF3 /* BGSpriteComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BGSpriteComponent.hpp; sourceTree = "<group>"; };
 		5EBBB96A25A0377200225DF3 /* MoveComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MoveComponent.hpp; sourceTree = "<group>"; };
 		5EBBB96B25A0377200225DF3 /* InputComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InputComponent.hpp; sourceTree = "<group>"; };
 		5EBBB96C25A0377200225DF3 /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
-		5EBBB96D25A0377200225DF3 /* Laser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Laser.hpp; sourceTree = "<group>"; };
-		5EBBB96E25A0377200225DF3 /* Asteroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Asteroid.cpp; sourceTree = "<group>"; };
-		5EBBB96F25A0377200225DF3 /* AnimSpriteComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimSpriteComponent.hpp; sourceTree = "<group>"; };
 		5EBBB97025A0377200225DF3 /* SpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteComponent.cpp; sourceTree = "<group>"; };
 		5EBBB97125A0377200225DF3 /* SpriteComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteComponent.hpp; sourceTree = "<group>"; };
 		5EBBB97225A0377300225DF3 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
 		5EBBB97325A0377300225DF3 /* CircleComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircleComponent.hpp; sourceTree = "<group>"; };
 		5EBBB97425A0377300225DF3 /* InputComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputComponent.cpp; sourceTree = "<group>"; };
+		5EBBB98525A0388B00225DF3 /* AIComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AIComponent.cpp; sourceTree = "<group>"; };
+		5EBBB98625A0388B00225DF3 /* AIComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AIComponent.hpp; sourceTree = "<group>"; };
+		5EBBB98825A0427800225DF3 /* AIState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AIState.cpp; sourceTree = "<group>"; };
+		5EBBB98925A0427800225DF3 /* AIState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AIState.hpp; sourceTree = "<group>"; };
+		5EBBB98B25A0639000225DF3 /* Search.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Search.cpp; sourceTree = "<group>"; };
 		5EBFFB022598548700A5A7B9 /* InputComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputComponent.cpp; sourceTree = "<group>"; };
 		5EBFFB032598548700A5A7B9 /* InputComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputComponent.hpp; sourceTree = "<group>"; };
 		5EBFFB06259871CE00A5A7B9 /* CircleComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircleComponent.cpp; sourceTree = "<group>"; };
@@ -475,13 +468,7 @@
 			children = (
 				5EBBB96825A0377200225DF3 /* Actor.cpp */,
 				5EBBB96025A0377200225DF3 /* Actor.hpp */,
-				5EBBB96225A0377200225DF3 /* AnimSpriteComponent.cpp */,
-				5EBBB96F25A0377200225DF3 /* AnimSpriteComponent.hpp */,
 				5EBBB95725A0377100225DF3 /* Assets */,
-				5EBBB96E25A0377200225DF3 /* Asteroid.cpp */,
-				5EBBB96325A0377200225DF3 /* Asteroid.hpp */,
-				5EBBB96725A0377200225DF3 /* BGSpriteComponent.cpp */,
-				5EBBB96925A0377200225DF3 /* BGSpriteComponent.hpp */,
 				5EBBB95C25A0377100225DF3 /* CircleComponent.cpp */,
 				5EBBB97325A0377300225DF3 /* CircleComponent.hpp */,
 				5EBBB95425A0377100225DF3 /* Component.cpp */,
@@ -490,19 +477,20 @@
 				5EBBB95625A0377100225DF3 /* Game.hpp */,
 				5EBBB97425A0377300225DF3 /* InputComponent.cpp */,
 				5EBBB96B25A0377200225DF3 /* InputComponent.hpp */,
-				5EBBB95E25A0377100225DF3 /* Laser.cpp */,
-				5EBBB96D25A0377200225DF3 /* Laser.hpp */,
 				5EBBB97225A0377300225DF3 /* Math.cpp */,
 				5EBBB95F25A0377200225DF3 /* Math.hpp */,
 				5EBBB96625A0377200225DF3 /* MoveComponent.cpp */,
 				5EBBB96A25A0377200225DF3 /* MoveComponent.hpp */,
 				5EBBB96125A0377200225DF3 /* Random.cpp */,
 				5EBBB95525A0377100225DF3 /* Random.hpp */,
-				5EBBB96525A0377200225DF3 /* Ship.cpp */,
-				5EBBB95D25A0377100225DF3 /* Ship.hpp */,
 				5EBBB97025A0377200225DF3 /* SpriteComponent.cpp */,
 				5EBBB97125A0377200225DF3 /* SpriteComponent.hpp */,
 				5EA6AF4025979B7E00FC6949 /* main.cpp */,
+				5EBBB98525A0388B00225DF3 /* AIComponent.cpp */,
+				5EBBB98625A0388B00225DF3 /* AIComponent.hpp */,
+				5EBBB98825A0427800225DF3 /* AIState.cpp */,
+				5EBBB98925A0427800225DF3 /* AIState.hpp */,
+				5EBBB98B25A0639000225DF3 /* Search.cpp */,
 			);
 			path = GameAI;
 			sourceTree = "<group>";
@@ -758,20 +746,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA6AF4125979B7E00FC6949 /* main.cpp in Sources */,
+				5EBBB98C25A0639000225DF3 /* Search.cpp in Sources */,
 				5EBBB98125A0377300225DF3 /* Math.cpp in Sources */,
-				5EBBB97725A0377300225DF3 /* Laser.cpp in Sources */,
+				5EBBB98A25A0427800225DF3 /* AIState.cpp in Sources */,
 				5EBBB97525A0377300225DF3 /* Component.cpp in Sources */,
 				5EBBB98225A0377300225DF3 /* InputComponent.cpp in Sources */,
 				5EBBB97E25A0377300225DF3 /* Actor.cpp in Sources */,
-				5EBBB97F25A0377300225DF3 /* Asteroid.cpp in Sources */,
-				5EBBB97925A0377300225DF3 /* AnimSpriteComponent.cpp in Sources */,
 				5EBBB97825A0377300225DF3 /* Random.cpp in Sources */,
-				5EBBB97B25A0377300225DF3 /* Ship.cpp in Sources */,
 				5EBBB97625A0377300225DF3 /* CircleComponent.cpp in Sources */,
 				5EBBB97A25A0377300225DF3 /* Game.cpp in Sources */,
 				5EBBB98025A0377300225DF3 /* SpriteComponent.cpp in Sources */,
+				5EBBB98725A0388B00225DF3 /* AIComponent.cpp in Sources */,
 				5EBBB97C25A0377300225DF3 /* MoveComponent.cpp in Sources */,
-				5EBBB97D25A0377300225DF3 /* BGSpriteComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

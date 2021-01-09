@@ -9,8 +9,6 @@
 #include "Game.hpp"
 #include "SDL_image.h"
 #include "Actor.hpp"
-#include "BGSpriteComponent.hpp"
-#include "Asteroid.hpp"
 #include "Random.hpp"
 
 Game::Game()
@@ -34,7 +32,7 @@ bool Game::Initialize()
     
     // 创建 SDL 窗体
     mWindow = SDL_CreateWindow(
-                               "Asteroids",       // 标题
+                               "Tower",       // 标题
                                100,               // 窗体左上角的 x 坐标
                                100,               // 窗体左上角的 y 坐标
                                1024,              // 窗体宽度
@@ -74,17 +72,6 @@ bool Game::Initialize()
 }
 
 void Game::LoadData() {
-    // 玩家控制的飞船
-    mShip = new Ship(this); // leakage
-    mShip->SetPosition(Vector2(512.0f, 384.0f));
-    mShip->SetRotation(Math::PiOver2);
-    
-    // 创建行星
-    const int kNumAsteroids = 20;
-    for (int i = 0; i < kNumAsteroids; i++)
-    {
-        new Asteroid(this);
-    }
 }
 
 void Game::UnloadData()
@@ -333,19 +320,4 @@ void Game::RemoveSprite(SpriteComponent* sprite)
     // (不能交换，不然顺序就没了)
     auto iter = std::find(mSprites.begin(), mSprites.end(), sprite);
     mSprites.erase(iter);
-}
-
-void Game::AddAsteroid(Asteroid* ast)
-{
-    mAsteroids.emplace_back(ast);
-}
-
-void Game::RemoveAsteroid(Asteroid* ast)
-{
-    auto iter = std::find(mAsteroids.begin(),
-        mAsteroids.end(), ast);
-    if (iter != mAsteroids.end())
-    {
-        mAsteroids.erase(iter);
-    }
 }
