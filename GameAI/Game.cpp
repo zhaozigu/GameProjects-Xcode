@@ -72,6 +72,7 @@ bool Game::Initialize()
 }
 
 void Game::LoadData() {
+    mGrid = new Grid(this);
 }
 
 void Game::UnloadData()
@@ -189,6 +190,19 @@ void Game::ProcessInput() {
         mIsRunning = false;
     }
     
+    if (keyState[SDL_SCANCODE_B])
+    {
+        mGrid->BuildTower();
+    }
+    
+    // 处理鼠标输入
+    int x, y;
+    Uint32 buttons = SDL_GetMouseState(&x, &y);
+    if (SDL_BUTTON(buttons) & SDL_BUTTON_LEFT)
+    {
+        mGrid->ProcessClick(x, y);
+    }
+
     mUpdatingActors = true;
     for (auto actor : mActors)
     {
@@ -320,4 +334,27 @@ void Game::RemoveSprite(SpriteComponent* sprite)
     // (不能交换，不然顺序就没了)
     auto iter = std::find(mSprites.begin(), mSprites.end(), sprite);
     mSprites.erase(iter);
+}
+
+Enemy* Game::GetNearestEnemy(const Vector2& pos)
+{
+    Enemy* best = nullptr;
+    
+    if (mEnemies.size() > 0)
+    {
+        best = mEnemies[0];
+        // 保存第一个距离平方，并测试是否有更接近的
+        float bestDistSq = (pos - mEnemies[0]->GetPosition()).LengthSq();
+        for (size_t i = 1; i < mEnemies.size(); i++)
+        {
+            float newDistSq = (pos - mEnemies[i]->GetPosition()).LengthSq();
+            if (newDistSq < bestDistSq)
+            {
+                bestDistSq = newDistSq;
+                best = mEnemies[i];
+            }
+        }
+    }
+    
+    return best;
 }

@@ -50,6 +50,25 @@
 		5EA6AF802597AB1100FC6949 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E79BCE52594E5B400B79CC3 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5EA6AF842597B08400FC6949 /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF822597B08400FC6949 /* Asteroid.cpp */; };
 		5EA6AF872597B2A000FC6949 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6AF852597B2A000FC6949 /* Random.cpp */; };
+		5EA75FA125AA04FB00C4B9B1 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA75F9F25AA04FB00C4B9B1 /* Enemy.cpp */; };
+		5EA75FA425AA076800C4B9B1 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA75FA225AA076800C4B9B1 /* Tile.cpp */; };
+		5EA75FA725AA09C900C4B9B1 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA75FA525AA09C900C4B9B1 /* Grid.cpp */; };
+		5EA75FAA25AA0D9800C4B9B1 /* Tower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA75FA825AA0D9800C4B9B1 /* Tower.cpp */; };
+		5EA75FAD25AA0E8900C4B9B1 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA75FAB25AA0E8900C4B9B1 /* Bullet.cpp */; };
+		5EA75FB025AA101600C4B9B1 /* NavComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA75FAE25AA101600C4B9B1 /* NavComponent.cpp */; };
+		5EA75FBE25AA14FC00C4B9B1 /* Airplane.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FBA25AA14E000C4B9B1 /* Airplane.png */; };
+		5EA75FBF25AA14FC00C4B9B1 /* Base.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB925AA14E000C4B9B1 /* Base.png */; };
+		5EA75FC025AA14FC00C4B9B1 /* Missile.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB525AA14E000C4B9B1 /* Missile.png */; };
+		5EA75FC125AA14FC00C4B9B1 /* Projectile.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FBD25AA14E000C4B9B1 /* Projectile.png */; };
+		5EA75FC225AA14FC00C4B9B1 /* TileBrown.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB825AA14E000C4B9B1 /* TileBrown.png */; };
+		5EA75FC325AA14FC00C4B9B1 /* TileBrownSelected.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB225AA14DF00C4B9B1 /* TileBrownSelected.png */; };
+		5EA75FC425AA14FC00C4B9B1 /* TileGreen.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB625AA14E000C4B9B1 /* TileGreen.png */; };
+		5EA75FC525AA14FD00C4B9B1 /* TileGreenSelected.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB125AA14DF00C4B9B1 /* TileGreenSelected.png */; };
+		5EA75FC625AA14FD00C4B9B1 /* TileGrey.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FBC25AA14E000C4B9B1 /* TileGrey.png */; };
+		5EA75FC725AA14FD00C4B9B1 /* TileGreySelected.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB425AA14DF00C4B9B1 /* TileGreySelected.png */; };
+		5EA75FC825AA14FD00C4B9B1 /* TileTan.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB325AA14DF00C4B9B1 /* TileTan.png */; };
+		5EA75FC925AA14FD00C4B9B1 /* TileTanSelected.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FB725AA14E000C4B9B1 /* TileTanSelected.png */; };
+		5EA75FCA25AA14FD00C4B9B1 /* Tower.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EA75FBB25AA14E000C4B9B1 /* Tower.png */; };
 		5EBBB97525A0377300225DF3 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB95425A0377100225DF3 /* Component.cpp */; };
 		5EBBB97625A0377300225DF3 /* CircleComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB95C25A0377100225DF3 /* CircleComponent.cpp */; };
 		5EBBB97825A0377300225DF3 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBB96125A0377200225DF3 /* Random.cpp */; };
@@ -123,12 +142,25 @@
 		};
 		5EA6AF3C25979B7E00FC6949 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = Assets;
+			dstSubfolderSpec = 16;
 			files = (
+				5EA75FBE25AA14FC00C4B9B1 /* Airplane.png in CopyFiles */,
+				5EA75FBF25AA14FC00C4B9B1 /* Base.png in CopyFiles */,
+				5EA75FC025AA14FC00C4B9B1 /* Missile.png in CopyFiles */,
+				5EA75FC125AA14FC00C4B9B1 /* Projectile.png in CopyFiles */,
+				5EA75FC225AA14FC00C4B9B1 /* TileBrown.png in CopyFiles */,
+				5EA75FC325AA14FC00C4B9B1 /* TileBrownSelected.png in CopyFiles */,
+				5EA75FC425AA14FC00C4B9B1 /* TileGreen.png in CopyFiles */,
+				5EA75FC525AA14FD00C4B9B1 /* TileGreenSelected.png in CopyFiles */,
+				5EA75FC625AA14FD00C4B9B1 /* TileGrey.png in CopyFiles */,
+				5EA75FC725AA14FD00C4B9B1 /* TileGreySelected.png in CopyFiles */,
+				5EA75FC825AA14FD00C4B9B1 /* TileTan.png in CopyFiles */,
+				5EA75FC925AA14FD00C4B9B1 /* TileTanSelected.png in CopyFiles */,
+				5EA75FCA25AA14FD00C4B9B1 /* Tower.png in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EA6AF4725979B9900FC6949 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -228,13 +260,34 @@
 		5EA6AF832597B08400FC6949 /* Asteroid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Asteroid.hpp; sourceTree = "<group>"; };
 		5EA6AF852597B2A000FC6949 /* Random.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
 		5EA6AF862597B2A000FC6949 /* Random.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Random.hpp; sourceTree = "<group>"; };
+		5EA75F9F25AA04FB00C4B9B1 /* Enemy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		5EA75FA025AA04FB00C4B9B1 /* Enemy.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Enemy.hpp; sourceTree = "<group>"; };
+		5EA75FA225AA076800C4B9B1 /* Tile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
+		5EA75FA325AA076800C4B9B1 /* Tile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
+		5EA75FA525AA09C900C4B9B1 /* Grid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		5EA75FA625AA09C900C4B9B1 /* Grid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Grid.hpp; sourceTree = "<group>"; };
+		5EA75FA825AA0D9800C4B9B1 /* Tower.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tower.cpp; sourceTree = "<group>"; };
+		5EA75FA925AA0D9800C4B9B1 /* Tower.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tower.hpp; sourceTree = "<group>"; };
+		5EA75FAB25AA0E8900C4B9B1 /* Bullet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bullet.cpp; sourceTree = "<group>"; };
+		5EA75FAC25AA0E8900C4B9B1 /* Bullet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bullet.hpp; sourceTree = "<group>"; };
+		5EA75FAE25AA101600C4B9B1 /* NavComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NavComponent.cpp; sourceTree = "<group>"; };
+		5EA75FAF25AA101600C4B9B1 /* NavComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NavComponent.hpp; sourceTree = "<group>"; };
+		5EA75FB125AA14DF00C4B9B1 /* TileGreenSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileGreenSelected.png; sourceTree = "<group>"; };
+		5EA75FB225AA14DF00C4B9B1 /* TileBrownSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileBrownSelected.png; sourceTree = "<group>"; };
+		5EA75FB325AA14DF00C4B9B1 /* TileTan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileTan.png; sourceTree = "<group>"; };
+		5EA75FB425AA14DF00C4B9B1 /* TileGreySelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileGreySelected.png; sourceTree = "<group>"; };
+		5EA75FB525AA14E000C4B9B1 /* Missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Missile.png; sourceTree = "<group>"; };
+		5EA75FB625AA14E000C4B9B1 /* TileGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileGreen.png; sourceTree = "<group>"; };
+		5EA75FB725AA14E000C4B9B1 /* TileTanSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileTanSelected.png; sourceTree = "<group>"; };
+		5EA75FB825AA14E000C4B9B1 /* TileBrown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileBrown.png; sourceTree = "<group>"; };
+		5EA75FB925AA14E000C4B9B1 /* Base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Base.png; sourceTree = "<group>"; };
+		5EA75FBA25AA14E000C4B9B1 /* Airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airplane.png; sourceTree = "<group>"; };
+		5EA75FBB25AA14E000C4B9B1 /* Tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tower.png; sourceTree = "<group>"; };
+		5EA75FBC25AA14E000C4B9B1 /* TileGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileGrey.png; sourceTree = "<group>"; };
+		5EA75FBD25AA14E000C4B9B1 /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
 		5EBBB95425A0377100225DF3 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		5EBBB95525A0377100225DF3 /* Random.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Random.hpp; sourceTree = "<group>"; };
 		5EBBB95625A0377100225DF3 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
-		5EBBB95825A0377100225DF3 /* Asteroid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Asteroid.png; sourceTree = "<group>"; };
-		5EBBB95925A0377100225DF3 /* Laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Laser.png; sourceTree = "<group>"; };
-		5EBBB95A25A0377100225DF3 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
-		5EBBB95B25A0377100225DF3 /* ShipWithThrust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShipWithThrust.png; sourceTree = "<group>"; };
 		5EBBB95C25A0377100225DF3 /* CircleComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CircleComponent.cpp; sourceTree = "<group>"; };
 		5EBBB95F25A0377200225DF3 /* Math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
 		5EBBB96025A0377200225DF3 /* Actor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
@@ -491,6 +544,18 @@
 				5EBBB98825A0427800225DF3 /* AIState.cpp */,
 				5EBBB98925A0427800225DF3 /* AIState.hpp */,
 				5EBBB98B25A0639000225DF3 /* Search.cpp */,
+				5EA75F9F25AA04FB00C4B9B1 /* Enemy.cpp */,
+				5EA75FA025AA04FB00C4B9B1 /* Enemy.hpp */,
+				5EA75FA225AA076800C4B9B1 /* Tile.cpp */,
+				5EA75FA325AA076800C4B9B1 /* Tile.hpp */,
+				5EA75FA525AA09C900C4B9B1 /* Grid.cpp */,
+				5EA75FA625AA09C900C4B9B1 /* Grid.hpp */,
+				5EA75FA825AA0D9800C4B9B1 /* Tower.cpp */,
+				5EA75FA925AA0D9800C4B9B1 /* Tower.hpp */,
+				5EA75FAB25AA0E8900C4B9B1 /* Bullet.cpp */,
+				5EA75FAC25AA0E8900C4B9B1 /* Bullet.hpp */,
+				5EA75FAE25AA101600C4B9B1 /* NavComponent.cpp */,
+				5EA75FAF25AA101600C4B9B1 /* NavComponent.hpp */,
 			);
 			path = GameAI;
 			sourceTree = "<group>";
@@ -517,10 +582,19 @@
 		5EBBB95725A0377100225DF3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				5EBBB95825A0377100225DF3 /* Asteroid.png */,
-				5EBBB95925A0377100225DF3 /* Laser.png */,
-				5EBBB95A25A0377100225DF3 /* Ship.png */,
-				5EBBB95B25A0377100225DF3 /* ShipWithThrust.png */,
+				5EA75FBA25AA14E000C4B9B1 /* Airplane.png */,
+				5EA75FB925AA14E000C4B9B1 /* Base.png */,
+				5EA75FB525AA14E000C4B9B1 /* Missile.png */,
+				5EA75FBD25AA14E000C4B9B1 /* Projectile.png */,
+				5EA75FB825AA14E000C4B9B1 /* TileBrown.png */,
+				5EA75FB225AA14DF00C4B9B1 /* TileBrownSelected.png */,
+				5EA75FB625AA14E000C4B9B1 /* TileGreen.png */,
+				5EA75FB125AA14DF00C4B9B1 /* TileGreenSelected.png */,
+				5EA75FBC25AA14E000C4B9B1 /* TileGrey.png */,
+				5EA75FB425AA14DF00C4B9B1 /* TileGreySelected.png */,
+				5EA75FB325AA14DF00C4B9B1 /* TileTan.png */,
+				5EA75FB725AA14E000C4B9B1 /* TileTanSelected.png */,
+				5EA75FBB25AA14E000C4B9B1 /* Tower.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -746,18 +820,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA6AF4125979B7E00FC6949 /* main.cpp in Sources */,
+				5EA75FAD25AA0E8900C4B9B1 /* Bullet.cpp in Sources */,
 				5EBBB98C25A0639000225DF3 /* Search.cpp in Sources */,
+				5EA75FA125AA04FB00C4B9B1 /* Enemy.cpp in Sources */,
 				5EBBB98125A0377300225DF3 /* Math.cpp in Sources */,
 				5EBBB98A25A0427800225DF3 /* AIState.cpp in Sources */,
 				5EBBB97525A0377300225DF3 /* Component.cpp in Sources */,
 				5EBBB98225A0377300225DF3 /* InputComponent.cpp in Sources */,
 				5EBBB97E25A0377300225DF3 /* Actor.cpp in Sources */,
 				5EBBB97825A0377300225DF3 /* Random.cpp in Sources */,
+				5EA75FA425AA076800C4B9B1 /* Tile.cpp in Sources */,
 				5EBBB97625A0377300225DF3 /* CircleComponent.cpp in Sources */,
 				5EBBB97A25A0377300225DF3 /* Game.cpp in Sources */,
 				5EBBB98025A0377300225DF3 /* SpriteComponent.cpp in Sources */,
+				5EA75FB025AA101600C4B9B1 /* NavComponent.cpp in Sources */,
+				5EA75FAA25AA0D9800C4B9B1 /* Tower.cpp in Sources */,
 				5EBBB98725A0388B00225DF3 /* AIComponent.cpp in Sources */,
 				5EBBB97C25A0377300225DF3 /* MoveComponent.cpp in Sources */,
+				5EA75FA725AA09C900C4B9B1 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

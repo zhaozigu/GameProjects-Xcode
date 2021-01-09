@@ -14,6 +14,8 @@
 #include "SDL.h"
 #include "Math.hpp"
 #include "SpriteComponent.hpp"
+#include "Enemy.hpp"
+#include "Grid.hpp"
 
 // Game class
 class Game
@@ -34,6 +36,10 @@ public:
     void RemoveSprite(SpriteComponent* sprite);
     
     SDL_Texture* GetTexture(const std::string& fileName);
+    
+    class Grid* GetGrid() { return mGrid; }
+    std::vector<class Enemy*>& GetEnemies() { return mEnemies; }
+    class Enemy* GetNearestEnemy(const Vector2& pos);
 private:
     void LoadData();
     void UnloadData();
@@ -67,6 +73,10 @@ private:
     
     // 已加载的 textures
     std::unordered_map<std::string, SDL_Texture*> mTextures;
+    
+    std::vector<class Enemy*> mEnemies;
+    class Grid* mGrid;
+    float mNextEnemy;
 };
 
 #endif /* Game_hpp */
